@@ -1,0 +1,30 @@
+Create a clothing store database, that contains information on the type fo item, price, quality and clearance
+
+CREATE TABLE Clothing_Store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quality TEXT, clearance TEXT );
+INSERT INTO Clothing_Store VALUES(1, "shirts", 15, "HIGH", "NO"); 
+INSERT INTO Clothing_Store VALUES(2, "shorts", 13, "MEDIUM", "YES");
+INSERT INTO Clothing_Store VALUES(3, "pants", 11, "HIGH", "NO");
+INSERT INTO Clothing_Store VALUES(4, "long-sleeve", 9, "MEDIUM", "YES");
+INSERT INTO Clothing_Store VALUES(5, "sleeve-less", 14, "LOW", "YES"); 
+INSERT INTO Clothing_Store VALUES(6, "crop top", 4, "HIGH", "NO"); 
+INSERT INTO Clothing_Store VALUES(7, "short shorts", 7, "MEDIUM", "YES");
+INSERT INTO Clothing_Store VALUES(8, "skinny jeans", 22, "HIGH", "NO");
+INSERT INTO Clothing_Store VALUES(9, "high-waisted", 4, "HIGH", "NO");
+INSERT INTO Clothing_Store VALUES(10, "low-waisted", 3, "LOW", "YES");
+INSERT INTO Clothing_Store VALUES(11, "bell-bottoms", 3, "HIGH", "NO");
+INSERT INTO Clothing_Store VALUES(12, "SEASONAL", 17, "MEDIUM", "NO");
+INSERT INTO Clothing_Store VALUES(13, "LAST SEASON", 3, "LOW", "YES");
+INSERT INTO Clothing_Store VALUES(14, "UPCOMING", 25, "HIGH", "NO");
+INSERT INTO Clothing_Store VALUES(15, "BACK-ORDER", 22, "HIGH", "NO");
+
+-- What are the most cheapest products to the most expensivest? 
+SELECT * from Clothing_Store ORDER BY price;
+
+-- What is the highest quality item? 
+SELECT * FROM Clothing_Store ORDER BY quality; 
+
+-- What is the cost of the items over $10 and are they on clearance or not? 
+SELECT * FROM Clothing_Store WHERE PRICE > 10 ORDER BY CLEARANCE; 
+
+--What is the total price after all goods are sold? 
+SELECT SUM(PRICE) FROM Clothing_Store; 
